@@ -1,20 +1,15 @@
 - summary: |
-    - Проверка успешной регистрации пользователя через Email
+    - Проверка успешной регистрации
   requirement: |
     - У пользователя должна быть возможность зарегистрироваться на сайте
   prerequisites: |
-     Открыта главная страница веб-сайта
+    no
   test-data: |
-    - никнейм - aleksei-sazonov
-    - почта - mr.doomkid@gmail.com
-    - пароль - Testpass123
+    no data
   steps:
-    - Нажимаем sign up
-    - В поле nickname вводим aleksei-sazonov
-    - В поле e-mail вводим mr.doomkid@gmail.com
-    - В поле Password вводим Testpass123 
-    - В поле Password Confirmation вводим Testpass123
-    - Нажимаем submit
+    - Ввести имеил
+    - Ввести пароль
+    - Подтвердить пароль
   expected-result: |
     - Пользователь успешно зарегистрирован
 
@@ -23,7 +18,6 @@
   requirement: |
     - Возможность авторизоваться через GitHUb или Discord 
   prerequisites: |
-    Открыта главная страница веб-сайта
     Пользователь авторизован на GitHub
   test-data: |
     - no
@@ -37,7 +31,7 @@
   requirement: |
     - При вводе несуществующего email пользователь не авторизируется
   prerequisites:
-    Открыта страница авторизации
+    no
   test-data: |
     - Email: incognito123322@mail.ru
     - Password: 123456789
@@ -101,7 +95,7 @@
   requirement: |
     - У пользователя должна быть возможность посмотреть статистику других игроков
   prerequisites:
-    Открыта главная страница
+    no
   test-data: |
     - no data
   steps:
@@ -114,7 +108,7 @@
   requirement: |
     - Пользователь должен иметь возможность сдаться
   prerequisites:
-    Открыта главная страница
+    no
   test-data: |
     - no data
   steps:
@@ -131,7 +125,7 @@
   requirement: |
     - У пользователя должна быть возможность посмотреть информиацию о прошлых играх
   prerequisites:
-    Открыта главная страница
+    no
   test-data: |
     - no data
   steps:
@@ -144,7 +138,7 @@
   requirement: |
     - У пользователя должна быть возможность выброра языка для текста задачи в игре ( RU / ENG)
   prerequisites:
-    Открыта главная страница
+    no
   test-data: |
      - no data
   steps:
@@ -160,7 +154,7 @@
   requirement: |
     - Победа должна присваиваться игроку который верно решил задачу первым
   prerequisites:
-    Открыта главная страница 
+    no 
   test-data: |
     const _ = require("lodash");
     const R = require("rambda");
@@ -199,11 +193,10 @@
     - Всплывает окно с оповещением "If you read this you've lost the game"
 
 - summary: |
-    - Проверка отправки сообщения в чат
+    - Проверка отправки сообщения в чат с главной страницы
   requirement: |
     - У пользователя должна быть возможность общаться в чате с соперником
   prerequisites: |
-    Открыта главная страница
     Пользователь авторизован
   test-data: |
     - no data
@@ -219,7 +212,7 @@
   requirement: |
     - У пользователя должна быть возможность выбрать язык программирования для задачи
   prerequisites:
-    Открыта главная страница
+    no
   test-data: |
     - no data
   steps:
@@ -241,33 +234,22 @@
     - No data
   steps:
     - Перейти во вкладку Tornaments
-    - Прокрутить вниз до настроек создания турнира
-    - В поле "Name" ввести "New Test"
-    - В поле "Type" выбрать individual
-    - В поле "Description" ввести "Hexlet Test Tor"
+    - Ввести никнейм
     - В поле даты начала турнира установить время, например завтра
-    - В списке "Access type" выбрать "public"
-    - В списке "Task strategy" выбрать "game"
-    - Убрать выбор с "Use chat"
-    - Установить чекбокс "Use timer"
     - В списке "Task provider" выбрать "Level"
-    - В списке "Level" выбрать "elementary"
-    - В списке "Players limit" выбрать "32"
-    - В списке "Default language" выбрать "php"
-    - В поле "Match timeout seconds" ввести "150"
-    - В поле "Break duration seconds" ввести 42 
+    - Установить "Level"
+    - В списке "Default language" выбрать язык, например "php"
+    - Установить Match timeout 
     - Нажать кнопку "Create"
   expected-result: |
-    - Открылась страница турнира с названием: "New Test", типом "individual", 
-      описанием "Hexlet Test Tor", таймером до начала турнира 24 часа, публичным доступом,
-      стратегией турнира "game", без чата, уровнем сложности 1 звезда, лимитом игроков 32, язык php
+    - Турнир с заданными параметрами успешно создан
 
 - summary: |
     - Проверка работы сайта с разными браузервми
   requirement: |
     - Сайт должен корректно работать с современными версиями браузеров
   prerequisites: |
-    Открываем главную страницу сайта
+    no
   test-data: |
     - Google Chrome Chrome 118.0.5993.71 
     - Firefox 126.0.1
@@ -298,7 +280,7 @@
   requirement: |
     - Сайт должен отображать рейтинг игроков
   prerequisites: |
-    - Открыта гравная страница
+    no
   test-data: |
     No data
   steps:
@@ -320,7 +302,5 @@
     - Открываем сайт на мобильном устройстве, например Iphone 15 pro
   expected-result: |
     - Сайт корректно отображается.
-    
-
 
     
